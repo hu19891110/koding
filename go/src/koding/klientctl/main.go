@@ -1027,6 +1027,7 @@ func generateTagsForCLI(full string) []string {
 	}
 
 	// TODO: add whoami
+	tags = metrics.AppendTag(tags, "version", config.VersionNum())
 
 	// TODO: add guest OS info
 

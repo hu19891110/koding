@@ -162,7 +162,7 @@ func run(args []string) {
 		Name:  "metrics",
 		Usage: "Publish events from external sources.",
 		Subcommands: []cli.Command{{
-			// Hidden: true, // do not show it to users.
+			Hidden:       true, // do not show it to users.
 			Name:         "add",
 			Usage:        "Add new metric.",
 			Action:       ctlcli.ExitErrAction(MetricPushHandler(m, cliExternalTags), log, "add"),
